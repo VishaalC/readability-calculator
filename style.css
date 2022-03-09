@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  /* background: rgb(2,0,36); */
+  /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+}
+
+#input-field{
+    display: flex;
+    justify-content: center;
+}
+
+#main-input{
+    margin-top: auto;
+}
+
+#button-wrap{
+    display: flex;
+    justify-content: center;
+}
+
+
+#input-field{
+    justify-self: center;
+}
