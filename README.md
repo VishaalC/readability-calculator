@@ -1,2 +1,2 @@
 # web-dev-project
-Project for college
+Word counter using HTML, CSS & JS
