@@ -22,7 +22,35 @@ button.addEventListener("click", () => {
       maxKey = key;
     }
   }
-
   results.innerText = maxKey;
-  console.log(max,maxKey);
+  console.log(count);
 });
+
+input.addEventListener('keyup', function() {
+  console.clear();
+
+  Char.innerHTML = input.value.length;
+
+  var words = input.value.match(/\b[-?(\w+)?]+\b/gi);
+  if (words) {
+    word.innerHTML = words.length;
+  } else {
+    word.innerHTML = 0;
+  }
+
+  if (words) {
+    var sentences = input.value.split(/[.|!|?]+/g);
+    console.log(sentences);
+    sen.innerHTML = sentences.length - 1;
+  } else {
+    sen.innerHTML = 0;
+  }
+
+  if (words) {
+    var paragraphs = input.value.replace(/\n$/gm, '').split(/\n/);
+    para.innerHTML = paragraphs.length;
+  } else {
+    para.innerHTML = 0;
+  }
+
+})

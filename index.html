@@ -1,27 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Frequency Calculator</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+    <title>Word Counter</title>
   </head>
+  
   <body>
-    <script defer src="index.js"></script>
-
-    <div id="main-input">
-      <div id="input-field">
-        <textarea id="input" name="input" id="" cols="30" rows="10"></textarea>
+    <div class="container">
+      <h1>Word Counter</h1>
+      <div id="main-input">
+        <div id="input-field">
+          <textarea placeholder="Enter text here" id="input" name="input" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div id="button-wrap">
+          <button id="calc">Calculate</button>
+        </div>
       </div>
-      <div id="button-wrap">
-        <button id="calc">Calculate</button>
+      <div class="output">
+        <div>Characters: <span id="Char">0</span></div>
+        <div>Words: <span id="word">0</span></div>
+        <div>Sentences: <span id="sen">0</span></div>
+        <div>Paragraphs: <span id="para">0</span></div>
       </div>
     </div>
-
-    Results
+    
+    <!--Results-->
     <div id="results">
-
+      
     </div>
+    <script defer src="index.js"></script>
   </body>
 </html>
