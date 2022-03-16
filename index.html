@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="./helpers.js"></script>
     <title>Word Counter</title>
   </head>
   
@@ -16,9 +18,10 @@
       <div id="main-input">
         <div id="input-field">
           <textarea placeholder="Enter text here" id="input" name="input" id="" cols="30" rows="10"></textarea>
-        </div>
+        </div> 
         <div id="button-wrap">
-          <button id="calc">Calculate</button>
+          <button id="letters">Letter frequency</button>
+          <button id="words-freq">Word Frequency</button>
         </div>
       </div>
       <div class="output">
@@ -30,8 +33,8 @@
     </div>
     
     <!--Results-->
-    <div id="results">
-      
+    <div id="graphs">
+      <canvas id="frequent" ></canvas>   
     </div>
     <script defer src="script.js"></script>
   </body>

@@ -63,9 +63,19 @@ button {
 
 #button-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  
 }
 
 #input-field {
   justify-self: center;
+}
+
+#frequent{
+  width: 100px;
+  height: 100px;
+}
+
+#letters , #words{
+  font-size: 18px;
 }
