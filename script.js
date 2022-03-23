@@ -16,7 +16,12 @@ letter.addEventListener("click", () => {
 input.addEventListener("keyup", function () {
   console.clear();
 
-  Char.innerHTML = input.value.length;
+  var letc = input.value.replace(/[^a-zA-Z]/g, '');
+  if (letc) {
+    Char.innerHTML = letc.length;
+  } else {
+    Char.innerHTML = 0;
+  }
 
   var words = input.value.match(/\b[-?(\w+)?]+\b/gi);
   if (words) {
@@ -25,18 +30,49 @@ input.addEventListener("keyup", function () {
     word.innerHTML = 0;
   }
 
+  var sentences = input.value.split(/[.|!|?]+/g);
   if (words) {
-    var sentences = input.value.split(/[.|!|?]+/g);
     console.log(sentences);
     sen.innerHTML = sentences.length - 1;
   } else {
     sen.innerHTML = 0;
   }
 
+  var paragraphs = input.value.replace(/\n$/gm, "").split(/\n/);
   if (words) {
-    var paragraphs = input.value.replace(/\n$/gm, "").split(/\n/);
     para.innerHTML = paragraphs.length;
   } else {
     para.innerHTML = 0;
   }
 });
+
+readab.addEventListener("click", function() {
+  var letc = input.value.replace(/[^a-zA-Z]/g, '').length;
+  var words = input.value.match(/\b[-?(\w+)?]+\b/gi).length;
+  var sentences = input.value.split(/[.|!|?]+/g).length - 1;
+  var paragraphs = input.value.replace(/\n$/gm, "").split(/\n/).length;
+
+  var L = (letc / words) * 100;
+  // console.log(L);
+  var S = (sentences / words) * 100;
+  // console.log(S)
+  var index = (0.0588 * L) - (0.296 * S) - 15.8;
+  var index2 = Math.round(index);
+  // console.log(index);
+
+  if (index >=  16)
+  {
+    Read.innerHTML = 'Reading level is Grade16+';
+  }
+    
+  else if (index < 1)
+  {
+    Read.innerHTML = 'Reading level is Before Grade 1';
+  }
+    
+  else
+  {
+    Read.innerHTML = 'Reading level is ' + index2;
+  }
+});
+
