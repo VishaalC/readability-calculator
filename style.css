@@ -5,6 +5,8 @@
 
 h1 {
   text-align: center;
+  background-color: black;
+  color: white;
 }
 
 body {
@@ -41,7 +43,7 @@ button {
 .output {
   width: 100%;
   border: 1px solid rgb(24, 23, 23);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   background-color: rgb(241, 241, 247);
 }
