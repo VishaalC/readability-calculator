@@ -107,6 +107,7 @@ function word_frequency(words) {
         {
           label: "Word Frequency",
           data: [...word_length.slice(0, 10).map((x) => x[0])],
+          backgroundColor: ["black"],
           borderWidth: 1,
         },
       ],
@@ -144,6 +145,7 @@ function letter_frequency(words) {
         {
           label: "Letter Distribution",
           data: [...word_length.map((x) => x[0])],
+          backgroundColor: ["black"],
           borderWidth: 1,
         },
       ],
