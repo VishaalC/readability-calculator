@@ -1,3 +1,3 @@
-# web-dev-project
+# readability-calculator
 
-Word counter using HTML, CSS & JS
+Readability calculator using HTML, CSS & JS
